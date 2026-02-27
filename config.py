@@ -9,6 +9,9 @@ class Config:
     Centralized configuration to manage environment variables safely.
     """
     def __init__(self):
+        # NEW: OpenAI Settings
+        self.openai_api_key = os.getenv("OPENAI_API_KEY", "")
+
         # AWS / OpenSearch Settings
         self.aws_region = os.getenv("AWS_REGION", "us-east-1")
         self.opensearch_endpoint = os.getenv("OPENSEARCH_ENDPOINT", "")
